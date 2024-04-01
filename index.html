@@ -1,7 +1,106 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<style>
+		body {
+			background-image: url("img/bg.png");
+			font-family: 'Trebuchet MS', sans-serif;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			background-clip: #7d5494;
+			margin: 0px;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		.navbar{
+			background-color: #282828;
+			margin: 0px;
+			position: sticky;
+			color: white;
+			mix-blend-mode: multiply;
+		}
+
+		.grid{
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			flex-direction: row;
+			width: 75%;
+			margin: auto;
+		}
+
+		.grid > div {
+			display: flex; 
+			flex-basis: calc(25% - 25px);  
+			flex-direction: column;
+			margin-bottom: 50px;
+		}
+
+		.project-card{
+			background-color: #ffffff;
+			color: #000000;
+			border-radius: 5px;
+			display: flex;
+			flex-direction: column;
+			margin: 10px;
+			width: 60%;
+			padding: 5px;
+
+		}
+		.project-card img{
+			width: 100%;
+			height: auto;
+		}
+
+		.project-contents{
+			display: flex;
+			flex-direction: column;
+			padding-left: 20px;
+			overflow: auto;
+			text-wrap: wrap;
+		}
+
+		.project-button{
+			display: block;
+			width: 100%;
+			padding: 5px;
+			text-align: center;
+			background-color: #abebe7;
+			color: #000000;
+			border-radius: 1px;
+			cursor: pointer;
+			border: none;
+		}
+
+	</style>
+</head>
 <body>
-<h1>Wisteria Notes</h1>
-<p> (Home page work in progress) </p>
+	<div class = "navbar">
+		<h1 style="padding-left: 25px;"> WisteriaNotes </h1>
+	</div>
+	<h1 style="text-align: center; color: #abebe7; text-shadow: -1px -1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000"> Projects </h1>
+
+	<div class="grid">
+		<div class="project-card">
+			<img src="img/ikeseriestracker_thumb.jpg">
+			<div class="project-contents">
+				<b>Ikemen Series Route Tracker</b>
+				<p>A sheet to keep track of reading progress for each route in the Ikemen Vampire, Ikemen Genjiden, Ikemen Prince, and Ikemen Villains.</p>
+			</div>
+			<button class="project-button"><a href="https://wisterianotes.github.io/IkeseriesRouteTracker/">See project →</a></button>
+		</div>
+		<div class="project-card">
+			<img src="img/ikevilarchive_thumb.jpg">
+			<div class="project-contents">
+				<b>Ikemen Villains Archive</b>
+				<p>A fan-made card and event mini archive for Cybird's Ikemen Villains.</p>
+			</div>
+			<button class="project-button"><a href="https://wisterianotes.github.io/IkemenVillainsArchive/">See project →</a></button>
+		</div>
+	</div>
 </body>
 </html>
